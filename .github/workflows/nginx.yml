@@ -28,10 +28,10 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: docker_nodejs_demo
         IMAGE_TAG: nodejs_demo_image
-        # ECS_TASK_DEFINITION: ./task_definition.json
-        # CONTAINER_NAME: sample-app
-        # ECS_SERVICE: sample-service
-        # ECS_CLUSTER: sample-cluster
+        ECS_TASK_DEFINITION: ./task_definition.json
+        CONTAINER_NAME: sample-app
+        ECS_SERVICE: sample-service
+        ECS_CLUSTER: sample-cluster
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
