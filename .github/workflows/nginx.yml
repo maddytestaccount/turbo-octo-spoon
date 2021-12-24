@@ -100,13 +100,13 @@ jobs:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
         container-name: ${{ env.CONTAINER_NAME }}
         image: 651188399649.dkr.ecr.us-east-1.amazonaws.com/docker_nodejs_demo:nodejs_demo_image  
-    # - name: Deploy Amazon ECS task definition
-    #   env:
-    #     ECS_SERVICE: nginx-service
-    #     ECS_CLUSTER: sample
-    #   uses: aws-actions/amazon-ecs-deploy-task-definition@de0132cf8cdedb79975c6d42b77eb7ea193cf28e
-    #   with:
-    #     task-definition: ${{ steps.task-def.outputs.task-definition }}
-    #     service: ${{ env.ECS_SERVICE }}
-    #     cluster: ${{ env.ECS_CLUSTER }}
-    #     wait-for-service-stability: true           
+    - name: Deploy Amazon ECS task definition
+      env:
+        ECS_SERVICE: nginx-service
+        ECS_CLUSTER: samplenginx
+      uses: aws-actions/amazon-ecs-deploy-task-definition@de0132cf8cdedb79975c6d42b77eb7ea193cf28e
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: ${{ env.ECS_SERVICE }}
+        cluster: ${{ env.ECS_CLUSTER }}
+        wait-for-service-stability: true           
