@@ -53,7 +53,7 @@
    "memory": "400",
    "taskRoleArn": "arn:aws:iam::651188399649:role/ecsTaskExecutionRole",
    "compatibilities": [
-     "EC2"
+     "FARGATE"
    ],
    "taskDefinitionArn": "arn:aws:ecs:us-east-1:651188399649:task-definition/webservernginx:1",
    "family": "webservernginx",
