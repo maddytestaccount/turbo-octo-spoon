@@ -99,7 +99,7 @@ jobs:
       with:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
         container-name: ${{ env.CONTAINER_NAME }}
-        image: ${{ steps.build-image.outputs.image }}     
+        image: 651188399649.dkr.ecr.us-east-1.amazonaws.com/docker_nodejs_demo:nodejs_demo_image  
     - name: Deploy Amazon ECS task definition
       env:
         ECS_SERVICE: sample_service
