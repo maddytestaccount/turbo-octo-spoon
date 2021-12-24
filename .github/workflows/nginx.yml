@@ -1,7 +1,7 @@
 name: Docker build and push to ECR
 on:
   push: 
-    branches: [ fargate ]
+    branches: [ master ]
 
 jobs:
   docker-build-push-sandbox:
