@@ -4,7 +4,7 @@
     "containerDefinitions": [
         {
             "name": "fargate-app", 
-            "image": "", 
+            "image": "651188399649.dkr.ecr.us-east-1.amazonaws.com/docker_nodejs_demo:nodejs_demo_image", 
             "portMappings": [
                 {
                     "containerPort": 80, 
